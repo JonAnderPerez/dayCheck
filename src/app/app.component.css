@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+
+/* ESTILOS NORMALES (para móviles en vertical) */
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-color: #212121;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+    left: 0;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(248, 181, 0, 0.3) 0%, rgba(248, 181, 0, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: top -100px left -100px;
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(92, 99, 110, 0.3) 0%, rgba(92, 99, 110, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: bottom -100px right -100px;
+}
+
+.titulo {
+    position: absolute;
+    top: 64px;
+    left: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.titulo h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 37px;
+    color: #fff;
+}
+
+.logos {
+    position: absolute;
+    top: 134px;
+    left: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos a {
+    line-height: 32px;
+    width: 32px;
+    text-align: center;
+    color: #fff;
+    font-size: 32px; 
+    margin-right: 8px;
+}
+
+.descripcion {
+    position: absolute;
+    top: 198px;
+    left: 32px;
+    width: 80%;
+}
+
+.descripcion h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.mockup {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+}
+
+.mockup img {
+    height: auto;
+    width: 60vw;
+}
+
+.download {
+    position: absolute;
+    left: 32px;
+    bottom: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.download h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.download img {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+/* Moviles un poco mas anchos */
+@media (min-width: 576px) {
+
+    .background::before {
+        width: 80vw;
+        height: 80vw;
+        background-position: top -100px left -100px;
+    }
+    
+    .background::after {
+        width: 80vw;
+        height: 80vw;
+        background-position: bottom -100px right -100px;
+    }
+
+    .mockup img {
+        width: 50vw;
+    }
+}
+
+/* Móviles en horizontal o tablets en vertical */
+@media (min-width: 768px) {
+    .background::before {
+        width: 60vw;
+        height: 60vw;
+        background-position: top -100px left -100px;
+    }
+    
+    .background::after {
+        width: 60vw;
+        height: 60vw;
+        background-position: bottom -100px right -100px;
+    }
+
+    .descripcion {
+        width: 60%;
+    }
+    
+    .descripcion h3 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .mockup img {
+        width: 40vw;
+    }
+
+    .download {
+        flex-direction: row;
+    }
+    
+    .download h3 {
+        font-size: 24px;
+    }
+
+}
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) { 
+
+    .titulo h1 {
+        line-height: 48px;
+    }
+
+    .titulo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logos {
+        top: 64px;
+        right: 32px;
+        justify-content: flex-end;
+    }
+
+    .mockup img {
+        width: 35vw;
+    }
+
+}
+ 
+/* Escritorios muy anchos */
+@media (min-width: 1200px) {
+    .background::before {
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    .background::after {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .descripcion {
+        width: 40%;
+    }
+
+    .mockup img {
+        width: 20vw;
+    }
+}
+
+/* Escritorios muy anchos */
+@media (min-width: 1620px) {
+    .background::before {
+        background-position: top -15vw left -15vw;
+    }
+    
+    .background::after {
+        background-position: bottom -15vw right -15vw;
+    }
+
+    .titulo {
+        left: 64px;
+    }
+
+    .titulo h1 {
+        font-size: 64px;
+        line-height: 64px;
+    }
+
+    .titulo img {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .logos a {
+        line-height: 48px;
+        width: 48px;
+        font-size: 48px; 
+        margin-right: 16px;
+    }
+
+    .logos a img {
+        height: 48px;
+        width: 48px;
+    }
+
+    .descripcion {
+        width: 50%;
+        top: 40vh;
+        left: 64px;
+    }
+
+    .descripcion h3 {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    .mockup img {
+        width: 20vw;
+    }
+
+    .download {
+        left: 64px;
+    }
+    
+    .download h3 {
+        font-size: 48px;
+        line-height: 48px;
+        margin-right: 32px;
+    }
+    
+    .download img {
+        height: 64px;
+        width: 64px;
+        margin-right: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+/* Escritorios muy anchos */
+@media (min-width: 1920px) {
+
+    .descripcion h3 {
+        font-size: 64px;
+        line-height: 68px;
+    }
+
+}
